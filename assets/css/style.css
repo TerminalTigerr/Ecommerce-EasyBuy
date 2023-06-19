@@ -8,7 +8,7 @@
     --title-color: rgb(15, 15, 15);
     --text-color: rgb(78, 74, 74);
     --body-color: rgb(255, 255, 255);
-    --container--color: #ffffffb1;
+    --container--color: #848282b1;
 
     /* FONT TYPOGRAPHY */
     --body-font: 'Poppins', sans-serif;
@@ -119,5 +119,95 @@ img, svg {
 }
 
 /*============ HEADER AND NAV ===========*/
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--container--color);
+    left: 0;
+    top: 0;
+    z-index: var(--z-fixed);
+}
 
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.nav__logo {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo span {
+    color: var(--first-color);
+}
+
+.logo__icon {
+    color: var(--first-color);
+}
+
+.nav__toggle, .nav__close {
+    display: flex;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/*============= RESPONSIVE TYPOGRAPHY ==============*/
+@media screen and (min-width: 1152px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --bigger-font-size: 2rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*============ Navigation for mobile devices =========*/
+@media screen and (max-width: 1023px){
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: rgba(132, 130, 130, 0.694);
+        width: 75%;
+        height: 100%;
+        padding: 4.5rem 0 0 3rem;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px); /* For safari */
+        transition: right .4s;
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: color .4s;
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+/*===== Show menu ====*/
+.show__menu {
+    right: 0;
+}
