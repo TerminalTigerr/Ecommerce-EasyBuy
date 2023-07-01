@@ -126,6 +126,8 @@ img, svg {
     left: 0;
     top: 0;
     z-index: var(--z-fixed);
+    border-bottom: solid 2px #000;
+    
 }
 
 .nav {
@@ -210,4 +212,18 @@ img, svg {
 /*===== Show menu ====*/
 .show__menu {
     right: 0;
+}
+
+.home {
+    background-color: var(--body-color);
+}
+
+.home__container {
+    padding: 2rem;
+    row-gap: 1.5rem;
+}
+
+.home__content {
+    display: grid;
+    row-gap: 2rem;
 }
