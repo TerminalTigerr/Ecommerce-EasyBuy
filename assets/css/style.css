@@ -6,10 +6,9 @@
     /* COLORS */
     --first-color: rgb(157, 10, 93) ;
     --title-color: rgb(15, 15, 15);
-    --text-color: rgb(78, 74, 74);
+    --text-color: rgb(110, 110, 110);
     --body-color: rgb(255, 255, 255);
-    --container--color: #848282b1;
-    --header-color: #e6edf3;
+    --container--color: rgba(90, 85, 85, 0.694);
 
     /* FONT TYPOGRAPHY */
     --body-font: 'Poppins', sans-serif;
@@ -39,3 +38,53 @@
     padding: 0;
     margin: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+input, textarea,
+button, body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+input, textarea, button {
+    outline: none;
+}
+
+h1,h2,h3,h4 {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/*========= REUSABLE CSS CLASSES =========*/
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*========== HEADER ============*/
